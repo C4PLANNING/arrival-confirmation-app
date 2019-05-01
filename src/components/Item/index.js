@@ -142,10 +142,15 @@ export default class Item extends React.Component {
             initialRegion={{
               latitude,
               longitude,
-              latitudeDelta: 0.00922,
-              longitudeDelta: 0.00521,
+              latitudeDelta: 0.0015,
+              longitudeDelta: 0.0015,
             }}
             showsUserLocation
+          />
+          <MapView.Marker
+            coordinate={{ latitude, longitude }}
+            title="現在地"
+            description="現在地"
           />
           <View style={styles.buttons}>
             <IconButton
